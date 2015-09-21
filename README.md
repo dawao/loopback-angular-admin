@@ -4,7 +4,7 @@ The goal is to have a starter project which can be used to quickly build an API 
 
 # loopback-angular-admin
 
-1. grunt.js loclahost
+1. grunt.js localhost
 2. index.tpl  google  delete server/boot/99
 3. package.json github-passport providers.json
 4. delete client folder delete model
