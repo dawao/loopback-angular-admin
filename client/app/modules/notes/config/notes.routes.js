@@ -26,17 +26,42 @@
           url: '/add',
           templateUrl: 'modules/notes/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, NotesService, note) {
+          controller: function ($state, NotesService, strategies, note) {
             this.note = note;
+            this.strategies = strategies;
+            this.setting = {tags:[],buys:[],sell:[],risk:[]};
             this.formFields = NotesService.getFormFields();
             this.formOptions = {};
+            this.change = function() {  
+                angular.forEach(strategies, function(stra, k) {
+                  if(this.note.strategyId == stra.id)
+                    angular.forEach(['tags','buys','sell','risk'], function(value, key) {
+                      angular.forEach(stra[value], function(n, i) {
+                        this.push({text:n,
+                          disp:1,
+                          idx:i});
+                      }, this.setting[value]);
+                    }, this);
+
+                }, this);
+
+            };
             this.submit = function () {
+              angular.forEach(['tags','buys','sell','risk'], function(value, key) {
+                this.note[value] = [];
+                angular.forEach(this.setting[value], function(n, i) {
+                  this.push(n.disp);
+                }, this.note[value]);
+              }, this);
               NotesService.upsertNote(this.note).then(function () {
                 $state.go('^.list');
               });
             };
           },
           resolve: {
+            strategies: function (strategyService) {
+              return strategyService.getStrategies();
+            },
             note: function () {
               return {};
             }
@@ -46,11 +71,33 @@
           url: '/:id/edit',
           templateUrl: 'modules/notes/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, NotesService, note) {
+          controller: function ($state, NotesService, note, strategyService) {
             this.note = note;
             this.formFields = NotesService.getFormFields();
             this.formOptions = {};
+            this.setting = {tags:[],buys:[],sell:[],risk:[]};
+            var self = this;
+            if(this.note.strategyId) {
+              strategyService.getStrategy(this.note.strategyId).$promise.then(function(result) {  
+
+                angular.forEach(['tags','buys','sell','risk'], function(value, key) {
+                  if(result[value] && result[value].length > 0){
+                      angular.forEach(result[value], function(n, i) {
+                        this.push({text:n,
+                          disp:self.note[value][i],
+                          idx:i});
+                      }, this.setting[value]);
+                  }
+                }, self);
+              });
+            }
             this.submit = function () {
+              angular.forEach(['tags','buys','sell','risk'], function(value, key) {
+                this.note[value] = [];
+                angular.forEach(this.setting[value], function(n, i) {
+                  this.push(n.disp);
+                }, this.note[value]);
+              }, this);
               NotesService.upsertNote(this.note).then(function () {
                 $state.go('^.list');
               });

@@ -12,17 +12,17 @@ module.exports = function(app) {
     extended: true
   }));
 
-  //// The access token is only available after boot
-  app.use(app.loopback.token({
-    model: app.models.accessToken
-  }));
+  // //// The access token is only available after boot
+  // app.use(app.loopback.token({
+  //   model: app.models.accessToken
+  // }));
 
-  app.use(loopback.cookieParser(app.get('cookieSecret')));
-  app.use(loopback.session({
-    secret: app.get('cookieSecret'),
-    saveUninitialized: true,
-    resave: true
-  }));
+  // app.use(loopback.cookieParser(app.get('cookieSecret')));
+  // app.use(loopback.session({
+  //   secret: app.get('cookieSecret'),
+  //   saveUninitialized: true,
+  //   resave: true
+  // }));
 
   var config = false;
   try {

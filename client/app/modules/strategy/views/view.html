@@ -1,0 +1,20 @@
+
+<h4>
+  <a href="" ui-sref="^.list" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+  {{strategy.name}}
+  <p class="lead" data-ng-bind="strategy.tags.join(',')"></p>
+  <p class="lead" data-ng-bind="strategy.buys.join(',')"></p>
+  <p class="lead" data-ng-bind="strategy.sell.join(',')"></p>
+  <p class="lead" data-ng-bind="strategy.risk.join(',')"></p>
+  <span class="pull-right btn-group" style="margin-top: 7px;">
+    <a href="" class="btn btn-sm btn-default" ui-sref="^.edit({id: strategy.id})">
+      <i class="fa fa-pencil"></i>
+    </a>
+    <a href="" class="btn btn-sm btn-default" ng-click="delete({id: strategy.id})">
+      <i class="fa fa-trash-o"></i>
+    </a>
+  </span>
+
+</h4>
+<hr>
+<pre>{{strategy | json}}</pre>

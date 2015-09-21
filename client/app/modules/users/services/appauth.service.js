@@ -62,8 +62,9 @@
               .then(function (response) {
                 if (response.data.id) {
                   LoopBackAuth.currentUserId = response.data.id;
-                  LoopBackAuth.accessTokenId = $cookies.accessToken.substring(
-                    2, 66);
+                  LoopBackAuth.accessTokenId = $cookies.accessToken.substring(2, 66);
+                  //如果服务端是以下这句，以上一句不用substring
+                  //res.cookie('accessToken', req.signedCookies['access_token']);
                 }
                 if (LoopBackAuth.currentUserId === null) {
                   delete $cookies['accessToken'];

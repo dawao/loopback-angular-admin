@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li data-ng-repeat="ticle in customerInfo" class="list-group-item {{ticle.disp==1?'':(ticle.disp?'list-group-item-success':'list-group-item-danger')}}" idx="{{ticle.idx}}">
+  	<span class="badge">{{ticle.disp==1?'待定':(ticle.disp?'符合':'不符合')}}</span>{{ticle.text}}</li>
+
+</ul>

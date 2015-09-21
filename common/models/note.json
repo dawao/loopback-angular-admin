@@ -15,16 +15,42 @@
       "required": true
     },
     "created": {
-      "type": "number"
+      "type": "date"
     },
     "tags": {
       "type": [
-        "string"
+        "number"
+      ]
+    },
+    "buys": {
+      "type": [
+        "number"
+      ]
+    },
+    "sell": {
+      "type": [
+        "number"
+      ]
+    },
+    "risk": {
+      "type": [
+        "number"
       ]
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    },
+    "strategy": {
+      "type": "belongsTo",
+      "model": "strategy",
+      "foreignKey": "strategyId"
+    }
+  },
   "acls": [],
-  "methods": []
+  "methods": {}
 }

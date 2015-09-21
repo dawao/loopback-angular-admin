@@ -7,9 +7,24 @@
     </div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="alert alert-danger" ng-if="addError" translate>Could not add note!</div>
-          <formly-form model="ctrl.note" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+          <formly-form model="ctrl.note" fields="ctrl.formFields" options="ctrl.formOptions">
+          <label class="control-label col-sm-1" for="strategy">方法</label>
+          <div class="controls col-sm-4">
+            <select name="strategy" class="form-control" ng-model="ctrl.note.strategyId" ng-options="strategy.id as strategy.name for strategy in ctrl.strategies" ng-change="ctrl.change()"></select>
+          </div>
+              <div class="form-group col-sm-12">
+
+                <tabset justified="true" class="col-sm-offset-1 col-sm-10">
+                    <tab heading="选股参考"><my-setting info="ctrl.setting.tags"></my-setting></tab>
+                    <tab heading="买入参考"><my-setting info="ctrl.setting.buys"></my-setting></tab>
+                    <tab heading="卖出参考"><my-setting info="ctrl.setting.sell"></my-setting></tab>
+                    <tab heading="风险控制"><my-setting info="ctrl.setting.risk"></my-setting></tab>
+                </tabset>
+
+              </div>
+          </formly-form>
         </div>
       </div>
     </div>

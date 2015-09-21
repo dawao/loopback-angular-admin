@@ -1,0 +1,36 @@
+<h4>
+  <a href="" ui-sref="^.list" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+
+  <span ng-show="!strategy.id" translate>Add a new strategy</span>
+  <span ng-show="strategy.id" translate>Edit strategy</span>
+
+</h4>
+
+
+<div class="row">
+  <div class="col-md-10">
+    <div class="alert alert-danger" ng-if="addError" translate>Could not add strategy!</div>
+    <formly-form model="strategy" fields="formFields" options="formOptions" ng-submit="onSubmit()">
+
+            <label class="control-label" for="tags">选股条件：</label>
+            <div class="controls">
+                <tags-input data-ng-model="tags" placeholder="添加条件"></tags-input>
+            </div>
+            <label class="control-label" for="buys">买入条件：</label>
+            <div class="controls">
+                <tags-input data-ng-model="buys" placeholder="添加条件"></tags-input>
+            </div>
+            <label class="control-label" for="sell">卖出条件：</label>
+            <div class="controls">
+                <tags-input data-ng-model="sell" placeholder="添加条件"></tags-input>
+            </div>
+            <label class="control-label" for="risk">风险控制：</label>
+            <div class="controls">
+                <tags-input data-ng-model="risk" placeholder="添加条件"></tags-input>
+            </div>
+	</formly-form>
+  </div>
+</div>
+<div class="controls">
+    <button class="btn btn-primary btn-success" ng-click="onSubmit()" translate>Submit</button>
+</div>

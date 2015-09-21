@@ -15,7 +15,7 @@
       };
 
       this.upsertNote = function (note) {
-        return Note.upsert(note).$promise
+        return Note[note.id?'upsert':'create'](note).$promise
           .then(function () {
             CoreService.toastSuccess(
               gettextCatalog.getString('Note saved'),
@@ -75,6 +75,42 @@
         ];
       };
 
+    }).directive('mySetting', function() {
+
+      return {
+        restrict: 'E',
+        scope: {
+          customerInfo: '=info'
+        },
+        link: function(scope, element, attr) {
+          var info = 'list-group-item-success';
+        var war = 'list-group-item-danger';
+          element.on('click', function(event) {
+              // Prevent default dragging of selected content
+              event.preventDefault();
+              var elm = angular.element(event.target);
+              if(elm.hasClass('badge'))
+                elm = elm.parent();
+              if(elm.hasClass('list-group-item')){
+                var idx = elm.attr('idx');
+                var badge = elm.find('span');
+                if(elm.hasClass(info)){
+                  scope.customerInfo[idx].disp = 0;
+                  elm.removeClass(info).addClass(war);
+                  badge.text('不符合');
+                }else{
+                  scope.customerInfo[idx].disp = 2;
+                  elm.addClass(info).removeClass(war);
+                  badge.text('符合');
+                }
+                
+                
+              }
+
+          });
+        },
+        templateUrl: 'modules/notes/views/my-setting.html'
+      };
     });
 
 })();
