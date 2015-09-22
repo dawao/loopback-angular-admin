@@ -39,7 +39,7 @@
     "public": false
   },
   "Note": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "Setting": {
