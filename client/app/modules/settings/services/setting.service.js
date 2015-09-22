@@ -54,29 +54,6 @@
         );
       };
 
-
-      this.getFormFields = function () {
-        var form = [
-          {
-            key: 'key',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Value'),
-              required: true
-            }
-          },
-          {
-            key: 'value',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Key'),
-              required: true
-            }
-          }
-        ];
-        return form;
-      };
-
     });
 
 })();

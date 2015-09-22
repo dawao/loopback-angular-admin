@@ -46,18 +46,6 @@
     "dataSource": "db",
     "public": true
   },
-  "Product": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Category": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Event": {
-    "dataSource": "db",
-    "public": true
-  },
   "AuthProvider": {
     "dataSource": "db",
     "public": true

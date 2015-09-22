@@ -17,8 +17,8 @@
       // 'btford.markdown',
       'oitozero.ngSweetAlert',
       'config',
-      'formly',
-      'formlyBootstrap',
+      // 'formly',
+      // 'formlyBootstrap',
       'lbServices',
       // 'monospaced.elastic',
       'ngAnimate',
@@ -41,13 +41,13 @@
       'com.module.core',
       'com.module.about',
       // 'com.module.browser',
-      'com.module.events',
+      // 'com.module.events',
       'com.module.files',
       'com.module.notes',
       'com.module.strategy',
       // 'com.module.pages',
       // 'com.module.posts',
-      'com.module.products',
+      // 'com.module.products',
       // 'com.module.sandbox',
       'com.module.settings',
       'com.module.users'
@@ -106,7 +106,7 @@
       gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
 
     })
-    .run(function (formlyConfig) {
+    .run(function () {
       /*
        ngModelAttrs stuff
        */
@@ -146,35 +146,7 @@
         ngModelAttrs[camelize(binding)] = {bound: binding};
       });
 
-      formlyConfig.setType({
-        name: 'timepicker',
-        template: '<timepicker ng-model="model[options.key]"></timepicker>',
-        wrapper: [
-          'bootstrapLabel',
-          'bootstrapHasError'
-        ],
-        defaultOptions: {
-          ngModelAttrs: ngModelAttrs,
-          templateOptions: {
-            timepickerOptions: {}
-          }
-        }
-      });
 
-      formlyConfig.setType({
-        name: 'datepicker',
-        template: '<datepicker ng-model="model[options.key]" ></datepicker>',
-        wrapper: [
-          'bootstrapLabel',
-          'bootstrapHasError'
-        ],
-        defaultOptions: {
-          ngModelAttrs: ngModelAttrs,
-          templateOptions: {
-            datepickerOptions: {}
-          }
-        }
-      });
     });
 
 })();

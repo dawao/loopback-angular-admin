@@ -28,8 +28,7 @@
           controllerAs: 'ctrl',
           controller: function ($state, SettingService, setting) {
             this.setting = setting;
-            this.formFields = SettingService.getFormFields();
-            this.formOptions = {};
+
             this.submit = function () {
               SettingService.upsert(this.setting).then(function () {
                 $state.go('^.list');
@@ -48,8 +47,7 @@
           controllerAs: 'ctrl',
           controller: function ($state, SettingService, setting) {
             this.setting = setting;
-            this.formFields = SettingService.getFormFields();
-            this.formOptions = {};
+
             this.submit = function () {
               SettingService.upsert(this.setting).then(function () {
                 $state.go('^.list');
