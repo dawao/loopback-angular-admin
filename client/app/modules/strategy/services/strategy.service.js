@@ -1,8 +1,8 @@
 'use strict';
 var app = angular.module('com.module.strategy');
 
-app.service('strategyService', ['$state', 'CoreService', 'Strategy', 'gettextCatalog', function($state,
-  CoreService, Strategy, gettextCatalog) {
+app.service('strategyService', ['$state', 'CoreService', 'Strategy', 'LoopBackAuth', 'gettextCatalog', function($state,
+  CoreService, Strategy, LoopBackAuth, gettextCatalog) {
 
   this.getStrategies = function() {
     return Strategy.find();

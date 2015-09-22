@@ -54,55 +54,6 @@
         );
       };
 
-
-      this.getFormFields = function (formType) {
-        var form = [
-          {
-            key: 'username',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Username'),
-              required: true
-            }
-          },
-          {
-            key: 'email',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Email'),
-              required: true
-            }
-          },
-          {
-            key: 'firstName',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Last name'),
-              required: true
-            }
-          },
-          {
-            key: 'lastName',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Last name'),
-              required: true
-            }
-          }
-        ];
-        if (formType === 'add') {
-          form.push({
-            key: 'password',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Password'),
-              required: true
-            }
-          });
-        }
-        return form;
-      };
-
     });
 
 })();

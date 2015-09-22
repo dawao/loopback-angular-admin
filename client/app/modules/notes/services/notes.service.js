@@ -2,10 +2,19 @@
   'use strict';
   angular
     .module('com.module.notes')
-    .service('NotesService', function ($state, CoreService, Note, gettextCatalog) {
+    .service('NotesService', function ($state, CoreService, Note, LoopBackAuth, gettextCatalog) {
 
       this.getNotes = function () {
-        return Note.find().$promise;
+        return Note.find({
+          filter: {
+            where: {
+              ownerId: LoopBackAuth.currentUserId
+            },
+            include: [
+              'user','strategy'
+            ]
+          }
+        }).$promise;
       };
 
       this.getNote = function (id) {
@@ -52,27 +61,6 @@
             cancelCb();
           }
         );
-      };
-
-      this.getFormFields = function () {
-        return [
-          {
-            key: 'title',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('Title'),
-              required: true
-            }
-          },
-          {
-            key: 'body',
-            type: 'textarea',
-            templateOptions: {
-              label: gettextCatalog.getString('Body'),
-              required: true
-            }
-          }
-        ];
       };
 
     }).directive('mySetting', function() {

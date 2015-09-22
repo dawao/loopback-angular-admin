@@ -30,8 +30,7 @@
             this.note = note;
             this.strategies = strategies;
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
-            this.formFields = NotesService.getFormFields();
-            this.formOptions = {};
+
             this.change = function() {  
                 angular.forEach(strategies, function(stra, k) {
                   if(this.note.strategyId == stra.id)
@@ -73,8 +72,7 @@
           controllerAs: 'ctrl',
           controller: function ($state, NotesService, note, strategyService) {
             this.note = note;
-            this.formFields = NotesService.getFormFields();
-            this.formOptions = {};
+            this.strategies = strategyService.getStrategies();
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
             var self = this;
             if(this.note.strategyId) {

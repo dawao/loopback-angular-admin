@@ -1,22 +1,7 @@
 'use strict';
 var app = angular.module('com.module.strategy');
 
-app.controller('strategyCtrl', function($scope, $state, $stateParams, strategyService,
-  gettextCatalog,AppAuth) {
-    AppAuth.ensureHasCurrentUser(function(user)
-    {
-      $scope.currentUser = user;
-    });
-  $scope.formFields = [ {
-            key: 'name',
-            type: 'input',
-            templateOptions: {
-              label: gettextCatalog.getString('name'),
-              required: true
-            }
-          }];
-
-  $scope.formOptions = {};
+app.controller('strategyCtrl', function($scope, $state, $stateParams, strategyService, gettextCatalog) {
 
   $scope.delete = function(id) {
     strategyService.deleteStrategy(id, function() {
@@ -63,10 +48,5 @@ app.controller('strategyCtrl', function($scope, $state, $stateParams, strategySe
     $scope.risk=[{text:'趋势为王-不在弱市买入'},{text:'平盘震荡方向不明不加仓'},{text:'非明确上升趋势下仓位不超50%'},{text:'持仓不超过五只股'},{text:'方向不明可放飞利润'}] ;
 
   }
-
-
-  
-
-
 
 });

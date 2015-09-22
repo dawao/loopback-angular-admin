@@ -7,24 +7,36 @@
     </div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="alert alert-danger" ng-if="addError" translate>Could not add note!</div>
-          <formly-form model="ctrl.note" fields="ctrl.formFields" options="ctrl.formOptions">
-          <label class="control-label col-sm-1" for="strategy">方法</label>
-          <div class="controls col-sm-4">
-            <select name="strategy" class="form-control" ng-model="ctrl.note.strategyId" ng-options="strategy.id as strategy.name for strategy in ctrl.strategies" ng-change="ctrl.change()"></select>
-          </div>
-              <div class="form-group col-sm-12">
-
-                <tabset justified="true" class="col-sm-offset-1 col-sm-10">
-                    <tab heading="选股参考"><my-setting info="ctrl.setting.tags"></my-setting></tab>
-                    <tab heading="买入参考"><my-setting info="ctrl.setting.buys"></my-setting></tab>
-                    <tab heading="卖出参考"><my-setting info="ctrl.setting.sell"></my-setting></tab>
-                    <tab heading="风险控制"><my-setting info="ctrl.setting.risk"></my-setting></tab>
-                </tabset>
-
+          <form class="form-horizontal">
+            <div class="form-group col-sm-12" >
+              <label class="control-label col-sm-1" for="title">Title</label>
+              <div class="controls col-sm-4">
+                <input name="title" type="text" data-ng-model="ctrl.note.title" class="form-control" placeholder="Title" required>
               </div>
-          </formly-form>
+              <label class="control-label col-sm-1" for="strategy">方法</label>
+              <div class="controls col-sm-4">
+                <select name="strategy" class="form-control" ng-model="ctrl.note.strategyId" ng-options="strategy.id as strategy.name for strategy in ctrl.strategies" ng-change="ctrl.change()"></select>
+              </div>
+            </div>
+            <div class="form-group col-sm-12">
+
+              <tabset justified="true" class="col-sm-offset-1 col-sm-10">
+                  <tab heading="选股参考"><my-setting info="ctrl.setting.tags"></my-setting></tab>
+                  <tab heading="买入参考"><my-setting info="ctrl.setting.buys"></my-setting></tab>
+                  <tab heading="卖出参考"><my-setting info="ctrl.setting.sell"></my-setting></tab>
+                  <tab heading="风险控制"><my-setting info="ctrl.setting.risk"></my-setting></tab>
+              </tabset>
+
+            </div>
+            <div class="form-group col-sm-12">
+              <label class="control-label col-sm-1" for="content">Content</label>
+              <div class="controls col-sm-10">
+                <textarea name="content" data-ng-model="ctrl.note.body" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -32,7 +44,6 @@
       <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
         Submit
       </button>
-      <button type="button" class="btn btn-default" ng-click="ctrl.formOptions.resetModel()">Reset</button>
     </div>
   </div>
 </form>
