@@ -3,19 +3,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.8.5\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
 
 #: client/app/modules/about/controllers/about.config.js:6
 #: client/app/modules/about/views/main.html:2
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: client/app/modules/strategy/views/main.html:2
 msgid "Add"
-msgstr ""
+msgstr "添加"
 
 #: client/app/modules/notes/views/form.html:5
 msgid "Add a new note"
-msgstr ""
+msgstr "添加新笔记"
 
 #: client/app/modules/settings/views/form.html:5
 msgid "Add a new setting"
@@ -23,11 +31,11 @@ msgstr ""
 
 #: client/app/modules/strategy/views/form.html:4
 msgid "Add a new strategy"
-msgstr ""
+msgstr "添加一个新的战略"
 
 #: client/app/modules/users/views/form.html:5
 msgid "Add a new user"
-msgstr ""
+msgstr "添加新用户"
 
 #: client/app/modules/about/views/main.html:3
 msgid "All about this application!"
@@ -40,7 +48,7 @@ msgstr ""
 #: client/app/modules/strategy/services/strategy.service.js:31
 #: client/app/modules/users/services/user.service.js:36
 msgid "Are you sure?"
-msgstr ""
+msgstr "您确定吗?"
 
 #: client/app/modules/users/views/profile.html:49
 msgid "Change it here!"
@@ -60,7 +68,7 @@ msgstr ""
 
 #: client/app/modules/users/controllers/register.ctrl.js:79
 msgid "Confirm Password"
-msgstr ""
+msgstr "确认密码"
 
 #: client/app/modules/notes/views/form.html:11
 msgid "Could not add note!"
@@ -116,7 +124,7 @@ msgstr ""
 #: client/app/modules/users/controllers/register.ctrl.js:52
 #: client/app/modules/users/views/form.html:15
 msgid "Email"
-msgstr ""
+msgstr "邮箱"
 
 #: client/app/modules/users/controllers/login.ctrl.js:40
 #: client/app/modules/users/controllers/register.ctrl.js:62
@@ -177,19 +185,19 @@ msgstr ""
 
 #: client/app/modules/users/views/form.html:24
 msgid "First name"
-msgstr ""
+msgstr "名"
 
 #: client/app/modules/users/controllers/register.ctrl.js:26
 msgid "First Name"
-msgstr ""
+msgstr "名"
 
 #: client/app/modules/core/views/app.html:16
 msgid "Hello,"
-msgstr ""
+msgstr "您好，"
 
 #: client/app/modules/core/views/home.html:5
 msgid "Home"
-msgstr ""
+msgstr "首页"
 
 #: client/app/modules/core/helpers/FormHelper.js:27
 #: client/app/modules/core/services/meta.service.js:102
@@ -202,27 +210,27 @@ msgstr ""
 
 #: client/app/modules/users/views/form.html:29
 msgid "Last name"
-msgstr ""
+msgstr "姓"
 
 #: client/app/modules/users/controllers/register.ctrl.js:39
 msgid "Last Name"
-msgstr ""
+msgstr "姓"
 
 #: client/app/modules/users/controllers/login.ctrl.js:101
 msgid "Logged in"
-msgstr ""
+msgstr "登录"
 
 #: client/app/modules/core/controllers/main.ctrl.js:26
 msgid "Logged out"
-msgstr ""
+msgstr "退出"
 
 #: client/app/modules/notes/views/main.html:3
 msgid "Manage your notes here!"
-msgstr ""
+msgstr "在这里管理您的笔记!"
 
 #: client/app/modules/settings/views/main.html:3
 msgid "Manage your settings here!"
-msgstr ""
+msgstr "在这里管理您的设置!"
 
 #: client/app/modules/strategy/views/main.html:1
 msgid "Manage your strategies here!"
@@ -266,7 +274,7 @@ msgstr ""
 
 #: client/app/modules/users/views/login.html:17
 msgid "Or register"
-msgstr ""
+msgstr "或注册"
 
 #: client/app/modules/users/views/register.html:20
 msgid "Or sign in"
@@ -306,19 +314,19 @@ msgstr ""
 #: client/app/modules/settings/config/settings.config.js:6
 #: client/app/modules/settings/views/main.html:2
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: client/app/modules/users/views/login.html:16
 msgid "Sign in"
-msgstr ""
+msgstr "登录"
 
 #: client/app/modules/users/views/login.html:7
 msgid "Sign In"
-msgstr ""
+msgstr "登录"
 
 #: client/app/modules/core/views/elements/navbar.html:43
 msgid "Sign out"
-msgstr ""
+msgstr "退出"
 
 #: client/app/modules/users/controllers/login.ctrl.js:55
 msgid "Stay signed in"
@@ -343,7 +351,7 @@ msgstr ""
 
 #: client/app/modules/strategy/views/form.html:42
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 #: client/app/modules/core/views/home.html:34
 #: client/app/modules/core/views/home.html:37
@@ -401,7 +409,7 @@ msgstr ""
 #: client/app/modules/users/config/users.config.js:5
 #: client/app/modules/users/views/main.html:2
 msgid "Users"
-msgstr ""
+msgstr "用户"
 
 #: client/app/modules/core/views/home.html:22
 msgid "Variables"
@@ -409,7 +417,7 @@ msgstr ""
 
 #: client/app/modules/core/views/home.html:6
 msgid "Welcome!"
-msgstr ""
+msgstr "欢迎！"
 
 #: client/app/modules/users/controllers/login.ctrl.js:102
 msgid "You are logged in!"

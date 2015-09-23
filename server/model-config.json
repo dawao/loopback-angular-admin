@@ -15,27 +15,27 @@
     "public": true
   },
   "userCredential": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "userIdentity": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "AppModel": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": false
   },
   "Note": {
@@ -51,7 +51,7 @@
     "public": true
   },
   "user": {
-    "dataSource": "db",
+    "dataSource": "mongodb",
     "public": true
   },
   "Meta": {

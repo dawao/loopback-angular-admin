@@ -56,9 +56,9 @@
 
       $rootScope.locales = {
         'de': {
-          lang: 'de',
-          country: 'DE',
-          name: gettextCatalog.getString('German')
+          lang: 'zh_CN',
+          country: 'CN',
+          name: gettextCatalog.getString('Chinese')
         },
         'en': {
           lang: 'en',
@@ -69,26 +69,6 @@
           lang: 'es_MX',
           country: 'MX',
           name: gettextCatalog.getString('Spanish')
-        },
-        'fr': {
-          lang: 'fr',
-          country: 'FR',
-          name: gettextCatalog.getString('Français')
-        },
-        'nl': {
-          lang: 'nl',
-          country: 'NL',
-          name: gettextCatalog.getString('Dutch')
-        },
-        'pt-BR': {
-          lang: 'pt_BR',
-          country: 'BR',
-          name: gettextCatalog.getString('Portuguese Brazil')
-        },
-        'ru_RU': {
-          lang: 'ru_RU',
-          country: 'RU',
-          name: gettextCatalog.getString('Russian')
         }
       };
 
