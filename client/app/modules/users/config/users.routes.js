@@ -17,7 +17,12 @@
         .state('app.users', {
           abstract: true,
           url: '/users',
-          templateUrl: 'modules/users/views/main.html'
+          templateUrl: 'modules/users/views/main.html',
+          data: {
+            permissions: {
+              only: ['admin']
+            }
+          }
         })
         .state('app.users.list', {
           url: '',

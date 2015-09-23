@@ -37,6 +37,7 @@
       'gettext',
       // 'angular-underscore/filters', 'schemaForm',
       'ui.select',
+      'permission',
       'ngTagsInput', 
       'com.module.core',
       'com.module.about',
@@ -86,7 +87,27 @@
       gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
 
     })
-    .run(function () {
+    .run(function (Permission, User, LoopBackAuth, $q) {
+
+      var deferred = $q.defer();
+      Permission.defineRole('admin', function (stateParams) {
+          return deferred.promise;
+      });
+      User.roles({ id : LoopBackAuth.currentUserId,
+                    filter: {
+                      where: {name: 'admin'}
+                    }
+      }).$promise.then(function (data) {
+        if (data.length > 0) {
+          deferred.resolve();
+        } else {
+          deferred.reject();
+        }
+      }, function () {
+        // Error with request
+        deferred.reject();
+      });
+      
       /*
        ngModelAttrs stuff
        */
