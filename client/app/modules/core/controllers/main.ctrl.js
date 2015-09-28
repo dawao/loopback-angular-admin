@@ -17,6 +17,25 @@
       AppAuth.ensureHasCurrentUser(function () {
         //This call also serves to redirect a user to the login screen, via the interceptor in users.auth.js, if they are not authenticated.
         $scope.currentUser = User.getCurrent();
+        $scope.currentUser.$promise.then(
+            function (data) {
+                  User.roles({ id : data.id,
+                      filter: {
+                        where: {name: 'admin'}
+                      }
+                  }).$promise.then(function (data) {
+                    if (data.length > 0) {
+                      $rootScope.r_deferred.resolve();
+                    } else {
+                      $rootScope.r_deferred.reject();
+                    }
+                  }, function () {
+                    // Error with request
+                    $rootScope.r_deferred.reject();
+                  })
+            }
+        );
+
       });
 
       $scope.menuoptions = $rootScope.menu;
