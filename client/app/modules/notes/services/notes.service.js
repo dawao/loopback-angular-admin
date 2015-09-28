@@ -72,13 +72,14 @@
         },
         link: function(scope, element, attr) {
           var info = 'list-group-item-success';
-        var war = 'list-group-item-danger';
+          var war = 'list-group-item-danger';
           element.on('click', function(event) {
               // Prevent default dragging of selected content
               event.preventDefault();
               var elm = angular.element(event.target);
-              if(elm.hasClass('badge'))
+              if(elm.hasClass('badge')){
                 elm = elm.parent();
+              }                
               if(elm.hasClass('list-group-item')){
                 var idx = elm.attr('idx');
                 var badge = elm.find('span');

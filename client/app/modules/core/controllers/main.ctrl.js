@@ -32,7 +32,7 @@
                   }, function () {
                     // Error with request
                     $rootScope.r_deferred.reject();
-                  })
+                  });
             }
         );
 

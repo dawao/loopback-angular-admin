@@ -33,7 +33,7 @@
 
             this.change = function() {  
                 angular.forEach(strategies, function(stra, k) {
-                  if(this.note.strategyId == stra.id)
+                  if(this.note.strategyId === stra.id){
                     angular.forEach(['tags','buys','sell','risk'], function(value, key) {
                       angular.forEach(stra[value], function(n, i) {
                         this.push({text:n,
@@ -41,7 +41,7 @@
                           idx:i});
                       }, this.setting[value]);
                     }, this);
-
+                  }
                 }, this);
 
             };
