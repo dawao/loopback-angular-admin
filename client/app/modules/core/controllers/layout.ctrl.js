@@ -61,15 +61,15 @@
 
       $scope.toggleSidebar = function () {
         var $ = angular.element;
-        if ($(window).width() <= 992) {
-          $('.row-offcanvas').toggleClass('active');
-          $('.left-side').removeClass('collapse-left');
-          $('.right-side').removeClass('strech');
-          $('.row-offcanvas').toggleClass('relative');
+        if (window.innerWidth <= 992) {
+          $(document.querySelector('.row-offcanvas')).toggleClass('active');
+          $(document.querySelector('.left-side')).removeClass('collapse-left');
+          $(document.querySelector('.right-side')).removeClass('strech');
+          $(document.querySelector('.row-offcanvas')).toggleClass('relative');
         } else {
           // Else, enable content streching
-          $('.left-side').toggleClass('collapse-left');
-          $('.right-side').toggleClass('strech');
+          $(document.querySelector('.left-side')).toggleClass('collapse-left');
+          $(document.querySelector('.right-side')).toggleClass('strech');
         }
       };
 
