@@ -22,7 +22,10 @@
         .state('app.home', {
           url: '',
           templateUrl: 'modules/core/views/home.html',
-          controller: 'HomeCtrl'
+          controller: 'HomeCtrl',
+          data: {
+            roles: ['admin']
+          }
         });
       $urlRouterProvider.otherwise('/router');
     });

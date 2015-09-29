@@ -37,7 +37,6 @@
       'gettext',
       // 'angular-underscore/filters', 'schemaForm',
       'ui.select',
-      'permission',
       'ngTagsInput', 
       'com.module.core',
       'com.module.about',
@@ -87,11 +86,7 @@
       gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
 
     })
-    .run(function ($rootScope, Permission, $q) {
-      $rootScope.r_deferred = $q.defer();
-      Permission.defineRole('admin', function (stateParams) {
-          return $rootScope.r_deferred.promise;
-      });    
+    .run(function () {
       /*
        ngModelAttrs stuff
        */

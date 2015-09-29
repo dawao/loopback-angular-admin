@@ -19,9 +19,7 @@
           url: '/users',
           templateUrl: 'modules/users/views/main.html',
           data: {
-            permissions: {
-              only: ['admin']
-            }
+            roles: ['admin']
           }
         })
         .state('app.users.list', {
@@ -29,7 +27,7 @@
           templateUrl: 'modules/users/views/list.html',
           controllerAs: 'ctrl',
           controller: function (users) {
-            console.log('users', users);
+            //console.log('users', users);
             this.users = users;
           },
           resolve: {

@@ -7,7 +7,10 @@
         .state('app.settings', {
           abstract: true,
           url: '/settings',
-          templateUrl: 'modules/settings/views/main.html'
+          templateUrl: 'modules/settings/views/main.html',
+          data: {
+            roles: ['admin']
+          }
         })
         .state('app.settings.list', {
           url: '',

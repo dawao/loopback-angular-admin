@@ -19,19 +19,25 @@
         $scope.currentUser = User.getCurrent();
         $scope.currentUser.$promise.then(
             function (data) {
-                  User.roles({ id : data.id,
-                      filter: {
-                        where: {name: 'admin'}
-                      }
+                  User.roles({ id : data.id//,filter: {where: {name: 'admin'}}
                   }).$promise.then(function (data) {
-                    if (data.length > 0) {
-                      $rootScope.r_deferred.resolve();
-                    } else {
-                      $rootScope.r_deferred.reject();
-                    }
+                    $scope.menuoptions = [];
+                    //只展示有权限的菜单
+                    angular.forEach(data, function (role) {
+                      angular.forEach($rootScope.menu, function (menu) {
+                        var sd = $state.get(menu.sref).data;
+                        var nr = sd && sd.roles ? sd.roles : [];
+                        var hasRole = nr.length?false:true; 
+                        angular.forEach(nr, function (ned) {
+                          if(role.name === ned) {hasRole = true;} 
+                        });
+                        hasRole && $scope.menuoptions.push(menu);
+                      });
+                    });
+                    
                   }, function () {
                     // Error with request
-                    $rootScope.r_deferred.reject();
+                    //$rootScope.r_deferred.reject();
                   });
             }
         );
