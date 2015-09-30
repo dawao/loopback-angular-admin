@@ -49,3 +49,6 @@
 .nav-tabs > li > a, .nav-tabs > li > a:hover {
   cursor: pointer;
 }
+.timeline:before {
+    left: 50%;
+}

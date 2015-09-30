@@ -33,4 +33,20 @@
     </div>
   </div>
 
+  <!-- view -->
+  <div class="container-fluid">
+  <timeline class="row">
+    <timeline-event ng-repeat="event in ctrl.events">
+      <timeline-badge class="{{event.badgeClass}}">
+        <i class="glyphicon {{event.badgeIconClass}}"></i>
+      </timeline-badge>
+      <timeline-panel class="{{event.badgeClass}}">
+        <timeline-heading>
+          <h4>{{event.title}}</h4>
+        </timeline-heading>
+        <p>{{event.content}}</p>
+      </timeline-panel>
+    </timeline-event>
+  </timeline>
+  </div>
 </div>

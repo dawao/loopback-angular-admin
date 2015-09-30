@@ -15,6 +15,7 @@
       // 'angularBootstrapNavTree',
       // 'angularFileUpload',
       // 'btford.markdown',
+      'angular-timeline',
       'oitozero.ngSweetAlert',
       'config',
       // 'formly',
