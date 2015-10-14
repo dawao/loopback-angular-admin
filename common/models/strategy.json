@@ -10,6 +10,10 @@
       "type": "string",
       "required": true
     },
+    "public": {
+      "type": "boolean",
+      "required": true
+    },
     "created": {
       "type": "date"
     },

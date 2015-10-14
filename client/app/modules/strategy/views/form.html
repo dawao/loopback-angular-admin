@@ -13,29 +13,42 @@
     <form class="form-horizontal" data-ng-submit="onSubmit()">
       <fieldset>
         <div class="form-group">
-            <label class="control-label" for="name">Name</label>
-            <div class="controls">
+            <label class="col-sm-2 control-label" for="name">名称</label>
+            <div class="col-sm-10 controls">
                 <input type="text" data-ng-model="strategy.name" class="form-control" placeholder="Name" required>
             </div>
-            <label class="control-label" for="tags">选股条件：</label>
-            <div class="controls">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">状态</label>
+            <div class="col-sm-10 controls">
+            <label class="radio-inline">
+              <input type="radio" data-ng-model="strategy.public" value="1"> 公开
+            </label>
+            <label class="radio-inline">
+              <input type="radio" data-ng-model="strategy.public" value="0"> 不公开
+            </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="tags">选股条件：</label>
+            <div class="col-sm-10 controls">
                 <tags-input data-ng-model="tags" placeholder="添加条件"></tags-input>
             </div>
-            <label class="control-label" for="buys">买入条件：</label>
-            <div class="controls">
+            <label class="col-sm-2 control-label" for="buys">买入条件：</label>
+            <div class="col-sm-10 controls">
                 <tags-input data-ng-model="buys" placeholder="添加条件"></tags-input>
             </div>
-            <label class="control-label" for="sell">卖出条件：</label>
-            <div class="controls">
+            <label class="col-sm-2 control-label" for="sell">卖出条件：</label>
+            <div class="col-sm-10 controls">
                 <tags-input data-ng-model="sell" placeholder="添加条件"></tags-input>
             </div>
-            <label class="control-label" for="risk">风险控制：</label>
-            <div class="controls">
+            <label class="col-sm-2 control-label" for="risk">风险控制：</label>
+            <div class="col-sm-10 controls">
                 <tags-input data-ng-model="risk" placeholder="添加条件"></tags-input>
             </div>
-      </div>
-    </fieldset>
-	</form>
+        </div>
+      </fieldset>
+  	</form>
   </div>
 </div>
 <div class="controls">

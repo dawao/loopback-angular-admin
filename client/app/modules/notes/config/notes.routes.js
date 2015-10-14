@@ -70,7 +70,7 @@
           },
           resolve: {
             strategies: function (strategyService) {
-              return strategyService.getStrategies();
+              return strategyService.getAvailableStrategies();
             },
             note: function () {
               return {};

@@ -5,9 +5,19 @@ app.service('strategyService', ['$state', 'CoreService', 'Strategy', 'LoopBackAu
   CoreService, Strategy, LoopBackAuth, gettextCatalog) {
 
   this.getStrategies = function() {
-    return Strategy.find();
+    return Strategy.find({
+          filter: {
+            where: { ownerId: LoopBackAuth.currentUserId}
+          }
+        });
   };
-
+  this.getAvailableStrategies = function() {
+    return Strategy.find({
+          filter: {
+            where: {or: [{ownerId: LoopBackAuth.currentUserId}, {public: true}]}
+          }
+        });
+  };
   this.getStrategy = function(id) {
     return Strategy.findById({
       id: id

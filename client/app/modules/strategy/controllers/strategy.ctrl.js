@@ -41,7 +41,7 @@ app.controller('strategyCtrl', function($scope, $state, $stateParams, strategySe
             $scope.strategy = result;
       });
   } else {
-    $scope.strategy = {tags:[],buys:[],sell:[],risk:[]};
+    $scope.strategy = {public:false,tags:[],buys:[],sell:[],risk:[]};
     $scope.tags = [{text:'业绩最近季度显著增长'},{text:'业绩连年稳定增长'},{text:'题材好且有板块效应'},{text:'有主力资金参与'},{text:'处于板块龙头地位'},{text:'有优质机构最近季度增仓'}];
     $scope.buys=[{text:'带量突破盘整区'},{text:'股价创新高'},{text:'形态无缺陷'},{text:'价量关系合理'}];
     $scope.sell=[{text:'涨25%考虑止赢'},{text:'跌5%减半仓'},{text:'跌8%考虑止损'},{text:'跌破最近大阳线考虑卖出'}];
