@@ -11,6 +11,7 @@
    */
     .controller('AboutCtrl', function ($scope) {
       $scope.angular = angular;
+      $scope.person = { fname: 'Clark', lname: 'Kent' };
     });
 
 })();
