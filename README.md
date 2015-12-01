@@ -10,3 +10,5 @@ The goal is to have a starter project which can be used to quickly build an API 
 4. delete client folder delete model
 5. model-config.json ,bower.json ,app.js
 6. passport.js  main.ctrl.js middleware.json
+
+把fonts.googleapis.com替换为fonts.useso.com
