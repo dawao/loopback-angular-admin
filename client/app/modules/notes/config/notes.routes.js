@@ -13,19 +13,33 @@
           url: '',
           templateUrl: 'modules/notes/views/list.html',
           controllerAs: 'ctrl',
-          controller: function (notes) {
+          controller: function ($uibModal, notes) {
             this.notes = notes;
-            this.events = [{
-              badgeClass: 'info',
-              badgeIconClass: 'glyphicon-check',
-              title: 'First heading',
-              content: 'Some awesome content.'
-            }, {
-              badgeClass: 'warning',
-              badgeIconClass: 'glyphicon-credit-card',
-              title: 'Second heading',
-              content: 'More awesome content.'
-            }];
+
+            this.openTimeline = function (size) {
+
+                var modalInstance = $uibModal.open({
+                  templateUrl: 'myModalContent.html',
+                  controller: 'ModalInstanceCtrl',
+                  resolve: {
+                    events: function () {
+                      var events = [{
+                        badgeClass: 'info',
+                        badgeIconClass: 'glyphicon-check',
+                        title: 'First heading',
+                        content: 'Some awesome content.'
+                      }, {
+                        badgeClass: 'warning',
+                        badgeIconClass: 'glyphicon-credit-card',
+                        title: 'Second heading',
+                        content: 'More awesome content.'
+                      }];
+                      return events;
+                    }
+                  }
+                });
+
+            };
           },
           resolve: {
             notes: function (NotesService) {
@@ -42,7 +56,7 @@
             this.strategies = strategies;
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
 
-            this.change = function() {  
+            this.change = function() {
                 angular.forEach(strategies, function(stra, k) {
                   if(this.note.strategyId === stra.id){
                     angular.forEach(['tags','buys','sell','risk'], function(value, key) {
@@ -87,7 +101,7 @@
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
             var self = this;
             if(this.note.strategyId) {
-              strategyService.getStrategy(this.note.strategyId).$promise.then(function(result) {  
+              strategyService.getStrategy(this.note.strategyId).$promise.then(function(result) {
 
                 angular.forEach(['tags','buys','sell','risk'], function(value, key) {
                   if(result[value] && result[value].length > 0){

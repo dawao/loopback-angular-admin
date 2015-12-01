@@ -22,7 +22,7 @@
         <a href="" ui-sref="^.view({id: item.id})">{{item.title}}</a>
       </h4>
 
-      <p class="list-group-item-text">{{item.body}}</p>
+      <p class="list-group-item-text" ng-click="ctrl.openTimeline()">{{item.body}}</p>
     </div>
     <div ng-show="!ctrl.notes.length" class="list-group-item">
       <h4 class="list-group-item-heading" translate>
@@ -33,20 +33,28 @@
     </div>
   </div>
 
-  <!-- view -->
-  <div class="container-fluid">
-  <timeline class="row">
-    <timeline-event ng-repeat="event in ctrl.events">
-      <timeline-badge class="{{event.badgeClass}}">
-        <i class="glyphicon {{event.badgeIconClass}}"></i>
-      </timeline-badge>
-      <timeline-panel class="{{event.badgeClass}}">
-        <timeline-heading>
-          <h4>{{event.title}}</h4>
-        </timeline-heading>
-        <p>{{event.content}}</p>
-      </timeline-panel>
-    </timeline-event>
-  </timeline>
-  </div>
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+      <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
+      <timeline style="max-width: 100%;">
+        <timeline-event ng-repeat="event in events">
+          <timeline-badge class="{{event.badgeClass}}">
+            <i class="glyphicon {{event.badgeIconClass}}"></i>
+          </timeline-badge>
+          <timeline-panel class="{{event.badgeClass}}">
+            <timeline-heading>
+              <h4>{{event.title}}</h4>
+            </timeline-heading>
+            <p>{{event.content}}</p>
+          </timeline-panel>
+        </timeline-event>
+      </timeline>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+  </script>
 </div>

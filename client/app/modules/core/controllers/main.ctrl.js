@@ -14,12 +14,12 @@
   angular
     .module('com.module.core')
     .controller('MainCtrl', function ($scope, $rootScope, $state, AppAuth, CoreService, User, gettextCatalog) {
-      AppAuth.ensureHasCurrentUser(function () {
+      AppAuth.ensureHasCurrentUser(function (cu) {
         //This call also serves to redirect a user to the login screen, via the interceptor in users.auth.js, if they are not authenticated.
         $scope.currentUser = User.getCurrent();
         $scope.currentUser.$promise.then(
-            function (data) {
-                  User.roles({ id : data.id//,filter: {where: {name: 'admin'}}
+            function (currentUser) {
+                  User.roles({ id : currentUser.id//,filter: {where: {name: 'admin'}}
                   }).$promise.then(function (data) {
                     $scope.menuoptions = [];
                     //只展示有权限的菜单
@@ -27,14 +27,14 @@
                       angular.forEach($rootScope.menu, function (menu) {
                         var sd = $state.get(menu.sref).data;
                         var nr = sd && sd.roles ? sd.roles : [];
-                        var hasRole = nr.length?false:true; 
+                        var hasRole = nr.length?false:true;
                         angular.forEach(nr, function (ned) {
-                          if(role.name === ned) {hasRole = true;} 
+                          if(role.name === ned) {hasRole = true;}
                         });
                         hasRole && $scope.menuoptions.push(menu);
                       });
                     });
-                    
+
                   }, function () {
                     // Error with request
                     //$rootScope.r_deferred.reject();

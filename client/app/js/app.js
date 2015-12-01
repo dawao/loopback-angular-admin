@@ -33,7 +33,7 @@
       'ui.gravatar',
       // 'ui.grid',
       'ui.router',
-      'toasty',
+      'angular-toasty',
       'autofields',
       'gettext',
       // 'angular-underscore/filters', 'schemaForm',
