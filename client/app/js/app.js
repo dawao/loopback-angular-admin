@@ -60,7 +60,7 @@
         'de': {
           lang: 'zh_CN',
           country: 'CN',
-          name: gettextCatalog.getString('Chinese')
+          name:'简体中文'
         },
         'en': {
           lang: 'en',
