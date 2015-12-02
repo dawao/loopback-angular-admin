@@ -5,21 +5,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.8.5\n"
-"Last-Translator: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: zh_CN\n"
+"X-Generator: Poedit 1.8.5\n"
 
 #: client/app/modules/about/controllers/about.config.js:6
 #: client/app/modules/about/views/main.html:2
 msgid "About"
 msgstr "关于"
-
-#: client/app/modules/strategy/views/main.html:2
-msgid "Add"
-msgstr "添加"
 
 #: client/app/modules/notes/views/form.html:5
 msgid "Add a new note"
@@ -27,7 +22,7 @@ msgstr "添加新笔记"
 
 #: client/app/modules/settings/views/form.html:5
 msgid "Add a new setting"
-msgstr ""
+msgstr "添加一个新的设置"
 
 #: client/app/modules/strategy/views/form.html:4
 msgid "Add a new strategy"
@@ -39,32 +34,32 @@ msgstr "添加新用户"
 
 #: client/app/modules/about/views/main.html:3
 msgid "All about this application!"
-msgstr ""
+msgstr "所有关于这个应用程序！"
 
 #: client/app/modules/core/helpers/FormHelper.js:23
 #: client/app/modules/core/services/meta.service.js:97
 #: client/app/modules/notes/services/notes.service.js:45
 #: client/app/modules/settings/services/setting.service.js:36
-#: client/app/modules/strategy/services/strategy.service.js:31
+#: client/app/modules/strategy/services/strategy.service.js:41
 #: client/app/modules/users/services/user.service.js:36
 msgid "Are you sure?"
 msgstr "您确定吗?"
 
 #: client/app/modules/users/views/profile.html:49
 msgid "Change it here!"
-msgstr ""
+msgstr "在这里更改！"
 
 #: client/app/modules/notes/views/list.html:32
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a note!"
-msgstr ""
+msgstr "单击<a href=“” ui-sref=“^.add”>此处</a>可以添加注释!"
 
 #: client/app/modules/settings/views/list.html:31
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a setting!"
-msgstr ""
+msgstr "单击<a href=“” ui-sref=“^.add”>此处</a>以添加设置!"
 
-#: client/app/modules/strategy/views/list.html:20
+#: client/app/modules/strategy/views/list.html:29
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a strategy!"
-msgstr ""
+msgstr "单击<a href=\"\" ui-sref=\"^.add\">这里</a>来添加的策略!"
 
 #: client/app/modules/users/controllers/register.ctrl.js:79
 msgid "Confirm Password"
@@ -72,124 +67,124 @@ msgstr "确认密码"
 
 #: client/app/modules/notes/views/form.html:11
 msgid "Could not add note!"
-msgstr ""
+msgstr "不能添加新笔记"
 
 #: client/app/modules/strategy/views/form.html:12
 msgid "Could not add strategy!"
-msgstr ""
+msgstr "不能添加一个新的战略"
 
 #: client/app/modules/users/views/form.html:11
 msgid "Could not add user!"
-msgstr ""
+msgstr "不能添加新用户"
 
 #: client/app/modules/core/views/home.html:25
 msgid "Current user"
-msgstr ""
+msgstr "当前用户"
 
 #: client/app/modules/core/config/core.config.js:26
 #: client/app/modules/core/views/home.html:13
 msgid "Dashboard"
-msgstr ""
+msgstr "概览"
 
 #: client/app/modules/core/helpers/FormHelper.js:24
 #: client/app/modules/core/services/meta.service.js:98
 #: client/app/modules/notes/services/notes.service.js:46
 #: client/app/modules/settings/services/setting.service.js:37
-#: client/app/modules/strategy/services/strategy.service.js:32
+#: client/app/modules/strategy/services/strategy.service.js:42
 #: client/app/modules/users/services/user.service.js:37
 msgid "Deleting this cannot be undone"
-msgstr ""
+msgstr "这里删除不能恢复"
 
 #: client/app/modules/users/controllers/register.ctrl.js:54
 msgid "Don't worry we won't spam your inbox"
-msgstr ""
+msgstr "不用担心我们向您发送垃圾邮件"
 
 #: client/app/modules/notes/views/form.html:6
 msgid "Edit note"
-msgstr ""
+msgstr "编辑笔记"
 
 #: client/app/modules/settings/views/form.html:6
 msgid "Edit setting"
-msgstr ""
+msgstr "编辑设置"
 
 #: client/app/modules/strategy/views/form.html:5
 msgid "Edit strategy"
-msgstr ""
+msgstr "编辑策略"
 
 #: client/app/modules/users/views/form.html:6
 msgid "Edit user"
-msgstr ""
+msgstr "编辑用户"
 
 #: client/app/modules/users/controllers/login.ctrl.js:32
 #: client/app/modules/users/controllers/register.ctrl.js:52
 #: client/app/modules/users/views/form.html:15
 msgid "Email"
-msgstr "邮箱"
+msgstr "邮件"
 
 #: client/app/modules/users/controllers/login.ctrl.js:40
 #: client/app/modules/users/controllers/register.ctrl.js:62
 msgid "Email address needs to be valid"
-msgstr ""
+msgstr "请填写有效的邮件地址"
 
 #: client/app/modules/core/services/meta.service.js:107
 msgid "Error deleting item"
-msgstr ""
+msgstr "删除报错"
 
 #: client/app/modules/core/helpers/FormHelper.js:33
 msgid "Error deleting item:"
-msgstr ""
+msgstr "删除报错："
 
 #: client/app/modules/notes/services/notes.service.js:55
 msgid "Error deleting note"
-msgstr ""
+msgstr "删除笔记报错"
 
 #: client/app/modules/settings/services/setting.service.js:46
 msgid "Error deleting setting"
-msgstr ""
+msgstr "删除设置报错"
 
-#: client/app/modules/strategy/services/strategy.service.js:40
+#: client/app/modules/strategy/services/strategy.service.js:50
 msgid "Error deleting Strategy"
-msgstr ""
+msgstr "删除策略报错"
 
 #: client/app/modules/users/services/user.service.js:46
 msgid "Error deleting user"
-msgstr ""
+msgstr "删除用户报错"
 
 #: client/app/modules/users/controllers/register.ctrl.js:136
 msgid "Error registering!"
-msgstr ""
+msgstr "注册报错！"
 
 #: client/app/modules/core/services/meta.service.js:86
 msgid "Error saving item"
-msgstr ""
+msgstr "保存报错"
 
 #: client/app/modules/notes/services/notes.service.js:36
 msgid "Error saving note"
-msgstr ""
+msgstr "保存笔记报错"
 
 #: client/app/modules/settings/services/setting.service.js:27
 msgid "Error saving setting"
-msgstr ""
+msgstr "保存设置报错"
 
-#: client/app/modules/strategy/services/strategy.service.js:24
+#: client/app/modules/strategy/services/strategy.service.js:34
 msgid "Error saving Strategy"
-msgstr ""
+msgstr "保存策略报错"
 
 #: client/app/modules/users/services/user.service.js:27
 msgid "Error saving user"
-msgstr ""
+msgstr "保存用户报错"
 
 #: client/app/modules/users/controllers/register.ctrl.js:127
 msgid "Error signin in after registration!"
-msgstr ""
+msgstr "注册后登录报错！"
 
 #: client/app/modules/users/views/form.html:24
 msgid "First name"
-msgstr "名"
+msgstr "名字"
 
 #: client/app/modules/users/controllers/register.ctrl.js:26
 msgid "First Name"
-msgstr "名"
+msgstr "名字"
 
 #: client/app/modules/core/views/app.html:16
 msgid "Hello,"
@@ -202,11 +197,11 @@ msgstr "首页"
 #: client/app/modules/core/helpers/FormHelper.js:27
 #: client/app/modules/core/services/meta.service.js:102
 msgid "Item deleted"
-msgstr ""
+msgstr "项目已删除！"
 
 #: client/app/modules/core/services/meta.service.js:80
 msgid "Item saved"
-msgstr ""
+msgstr "项目已保存"
 
 #: client/app/modules/users/views/form.html:29
 msgid "Last name"
@@ -220,57 +215,57 @@ msgstr "姓"
 msgid "Logged in"
 msgstr "登录"
 
-#: client/app/modules/core/controllers/main.ctrl.js:26
+#: client/app/modules/core/controllers/main.ctrl.js:51
 msgid "Logged out"
 msgstr "退出"
 
 #: client/app/modules/notes/views/main.html:3
 msgid "Manage your notes here!"
-msgstr "在这里管理您的笔记!"
+msgstr "在这里管理您的笔记！"
 
 #: client/app/modules/settings/views/main.html:3
 msgid "Manage your settings here!"
-msgstr "在这里管理您的设置!"
+msgstr "在这里管理您的设置！"
 
-#: client/app/modules/strategy/views/main.html:1
+#: client/app/modules/strategy/views/main.html:3
 msgid "Manage your strategies here!"
-msgstr ""
+msgstr "在这里管理您的策略！"
 
 #: client/app/modules/users/views/main.html:3
 msgid "Manager your users here!"
-msgstr ""
+msgstr "在这里管理您的用户！"
 
 #: client/app/modules/core/views/elements/small-box.html:8
 msgid "More info"
-msgstr ""
+msgstr "更多信息"
 
 #: client/app/modules/users/controllers/register.ctrl.js:33
 #: client/app/modules/users/controllers/register.ctrl.js:46
 msgid "Needs to have at least 4 characters"
-msgstr ""
+msgstr "至少需要4个字符"
 
 #: client/app/modules/users/controllers/login.ctrl.js:41
 #: client/app/modules/users/controllers/register.ctrl.js:63
 msgid "Nice email address!"
-msgstr ""
+msgstr "正确的邮件地址！"
 
 #: client/app/modules/notes/services/notes.service.js:50
 msgid "Note deleted"
-msgstr ""
+msgstr "笔记已删除！"
 
 #: client/app/modules/notes/services/notes.service.js:30
 msgid "Note saved"
-msgstr ""
+msgstr "笔记已保存"
 
 #: client/app/modules/notes/config/notes.config.js:6
 #: client/app/modules/notes/config/notes.config.js:9
 #: client/app/modules/notes/views/main.html:2
 msgid "Notes"
-msgstr ""
+msgstr "笔记"
 
 #: client/app/modules/core/helpers/FormHelper.js:32
 msgid "Oops"
-msgstr ""
+msgstr "糟糕"
 
 #: client/app/modules/users/views/login.html:17
 msgid "Or register"
@@ -278,37 +273,37 @@ msgstr "或注册"
 
 #: client/app/modules/users/views/register.html:20
 msgid "Or sign in"
-msgstr ""
+msgstr "或登录"
 
 #: client/app/modules/users/controllers/login.ctrl.js:47
 #: client/app/modules/users/controllers/register.ctrl.js:70
 msgid "Password"
-msgstr ""
+msgstr "密码"
 
 #: client/app/modules/core/views/elements/navbar.html:40
 msgid "Profile"
-msgstr ""
+msgstr "资料"
 
 #: client/app/modules/users/views/register.html:17
 #: client/app/modules/users/views/register.html:7
 msgid "Register"
-msgstr ""
+msgstr "注册"
 
 #: client/app/modules/users/controllers/register.ctrl.js:121
 msgid "Registered"
-msgstr ""
+msgstr "注册成功"
 
 #: client/app/modules/users/views/view.html:16
 msgid "Roles"
-msgstr ""
+msgstr "角色"
 
 #: client/app/modules/settings/services/setting.service.js:41
 msgid "Setting deleted"
-msgstr ""
+msgstr "设置已删除！"
 
 #: client/app/modules/settings/services/setting.service.js:21
 msgid "Setting saved"
-msgstr ""
+msgstr "设置已保存"
 
 #: client/app/modules/core/views/home.html:29
 #: client/app/modules/settings/config/settings.config.js:6
@@ -330,81 +325,81 @@ msgstr "退出"
 
 #: client/app/modules/users/controllers/login.ctrl.js:55
 msgid "Stay signed in"
-msgstr ""
+msgstr "保持登录"
 
 #: client/app/modules/strategy/config/strategy.config.js:5
 #: client/app/modules/strategy/config/strategy.config.js:9
 msgid "strategy"
-msgstr ""
+msgstr "策略"
 
-#: client/app/modules/strategy/views/main.html:1
+#: client/app/modules/strategy/views/main.html:2
 msgid "Strategy"
-msgstr ""
+msgstr "策略"
 
-#: client/app/modules/strategy/services/strategy.service.js:35
+#: client/app/modules/strategy/services/strategy.service.js:45
 msgid "Strategy deleted"
-msgstr ""
+msgstr "策略已删除"
 
-#: client/app/modules/strategy/services/strategy.service.js:19
+#: client/app/modules/strategy/services/strategy.service.js:29
 msgid "Strategy saved"
-msgstr ""
+msgstr "策略已保存"
 
-#: client/app/modules/strategy/views/form.html:42
+#: client/app/modules/strategy/views/form.html:55
 msgid "Submit"
 msgstr "提交"
 
 #: client/app/modules/core/views/home.html:34
 #: client/app/modules/core/views/home.html:37
 msgid "Theme"
-msgstr ""
+msgstr "主题"
 
 #: client/app/modules/notes/views/list.html:28
 msgid "There are no notes"
-msgstr ""
+msgstr "您还没有保存笔记"
 
 #: client/app/modules/settings/views/list.html:27
 msgid "There are no settings"
-msgstr ""
+msgstr "您还没有保存设置"
 
-#: client/app/modules/strategy/views/list.html:17
+#: client/app/modules/strategy/views/list.html:26
 msgid "There are no strategies"
-msgstr ""
+msgstr "您还没有保存策略！"
 
 #: client/app/modules/core/services/meta.service.js:87
 msgid "This item could no be saved:"
-msgstr ""
+msgstr "项目不能保存："
 
 #: client/app/modules/notes/services/notes.service.js:37
 msgid "This note could no be saved:"
-msgstr ""
+msgstr "笔记不能保存："
 
 #: client/app/modules/settings/services/setting.service.js:28
 msgid "This setting could no be saved:"
-msgstr ""
+msgstr "设置不能保存："
 
-#: client/app/modules/strategy/services/strategy.service.js:25
+#: client/app/modules/strategy/services/strategy.service.js:35
 msgid "This Strategy could no be saved:"
-msgstr ""
+msgstr "策略不能保存："
 
 #: client/app/modules/users/services/user.service.js:28
 msgid "This user could no be saved:"
-msgstr ""
+msgstr "用户不能保存"
 
 #: client/app/modules/core/views/elements/navbar.html:3
 msgid "Toggle navigation"
-msgstr ""
+msgstr "收起导航"
 
 #: client/app/modules/users/services/user.service.js:41
 msgid "User deleted"
-msgstr ""
+msgstr "用户已删除"
 
 #: client/app/modules/users/services/user.service.js:21
 msgid "User saved"
-msgstr ""
+msgstr "用户保存完成"
 
 #: client/app/modules/users/views/form.html:20
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 #: client/app/modules/users/config/users.config.js:5
 #: client/app/modules/users/views/main.html:2
@@ -413,7 +408,7 @@ msgstr "用户"
 
 #: client/app/modules/core/views/home.html:22
 msgid "Variables"
-msgstr ""
+msgstr "变量"
 
 #: client/app/modules/core/views/home.html:6
 msgid "Welcome!"
@@ -421,89 +416,89 @@ msgstr "欢迎！"
 
 #: client/app/modules/users/controllers/login.ctrl.js:102
 msgid "You are logged in!"
-msgstr ""
+msgstr "您已经登录！"
 
-#: client/app/modules/core/controllers/main.ctrl.js:27
+#: client/app/modules/core/controllers/main.ctrl.js:52
 msgid "You are logged out!"
-msgstr ""
+msgstr "您已经退出！"
 
 #: client/app/modules/users/controllers/register.ctrl.js:122
 msgid "You are registered!"
-msgstr ""
+msgstr "注册成功！"
 
 #: client/app/modules/users/controllers/login.ctrl.js:39
 #: client/app/modules/users/controllers/register.ctrl.js:61
 msgid "You need an email address"
-msgstr ""
+msgstr "您需要一个邮件地址"
 
 #: client/app/modules/users/views/profile.html:45
 msgid "Your Gravatar"
-msgstr ""
+msgstr "头像"
 
 #: client/app/modules/core/helpers/FormHelper.js:28
 msgid "Your item has been deleted!"
-msgstr ""
+msgstr "您的项目已经被删除！"
 
 #: client/app/modules/core/services/meta.service.js:103
 msgid "Your item is deleted!"
-msgstr ""
+msgstr "您的项目已经删除！"
 
 #: client/app/modules/core/services/meta.service.js:108
 msgid "Your item is not deleted!"
-msgstr ""
+msgstr "您的项目没有删除！"
 
 #: client/app/modules/core/services/meta.service.js:81
 msgid "Your item is safe with us!"
-msgstr ""
+msgstr "您的项目已经保存！"
 
 #: client/app/modules/notes/services/notes.service.js:51
 msgid "Your note is deleted!"
-msgstr ""
+msgstr "您的笔记已经删除！"
 
 #: client/app/modules/notes/services/notes.service.js:56
 msgid "Your note is not deleted!"
-msgstr ""
+msgstr "您的笔记没有删除！"
 
 #: client/app/modules/notes/services/notes.service.js:31
 msgid "Your note is safe with us!"
-msgstr ""
+msgstr "您的笔记已经保存！"
 
 #: client/app/modules/users/controllers/register.ctrl.js:87
 msgid "Your passwords need to match"
-msgstr ""
+msgstr "您的密码不匹配"
 
 #: client/app/modules/settings/services/setting.service.js:42
 msgid "Your setting is deleted!"
-msgstr ""
+msgstr "您的设置已经删除！"
 
 #: client/app/modules/settings/services/setting.service.js:47
 msgid "Your setting is not deleted!"
-msgstr ""
+msgstr "您的设置没有删除！"
 
 #: client/app/modules/settings/services/setting.service.js:22
 msgid "Your setting is safe with us!"
-msgstr ""
+msgstr "您的设置已经保存！"
 
-#: client/app/modules/strategy/services/strategy.service.js:36
+#: client/app/modules/strategy/services/strategy.service.js:46
 msgid "Your Strategy is deleted!"
-msgstr ""
+msgstr "您的策略已删除！"
 
-#: client/app/modules/strategy/services/strategy.service.js:41
+#: client/app/modules/strategy/services/strategy.service.js:51
 msgid "Your Strategy is not deleted!"
-msgstr ""
+msgstr "您的策略没有删除！"
 
-#: client/app/modules/strategy/services/strategy.service.js:20
+#: client/app/modules/strategy/services/strategy.service.js:30
 msgid "Your Strategy is safe with us!"
-msgstr ""
+msgstr "您的策略已经保存！"
 
 #: client/app/modules/users/services/user.service.js:42
 msgid "Your user is deleted!"
-msgstr ""
+msgstr "您的用户已删除！"
 
 #: client/app/modules/users/services/user.service.js:47
 msgid "Your user is not deleted!"
-msgstr ""
+msgstr "您的用户没有删除！"
 
 #: client/app/modules/users/services/user.service.js:22
 msgid "Your user is safe with us!"
-msgstr ""
+msgstr "您的用户已经保存！"

@@ -9,10 +9,6 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: client/app/modules/strategy/views/main.html:2
-msgid "Add"
-msgstr ""
-
 #: client/app/modules/notes/views/form.html:5
 msgid "Add a new note"
 msgstr ""
@@ -37,7 +33,7 @@ msgstr ""
 #: client/app/modules/core/services/meta.service.js:97
 #: client/app/modules/notes/services/notes.service.js:45
 #: client/app/modules/settings/services/setting.service.js:36
-#: client/app/modules/strategy/services/strategy.service.js:31
+#: client/app/modules/strategy/services/strategy.service.js:41
 #: client/app/modules/users/services/user.service.js:36
 msgid "Are you sure?"
 msgstr ""
@@ -54,7 +50,7 @@ msgstr ""
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a setting!"
 msgstr ""
 
-#: client/app/modules/strategy/views/list.html:20
+#: client/app/modules/strategy/views/list.html:29
 msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a strategy!"
 msgstr ""
 
@@ -87,7 +83,7 @@ msgstr ""
 #: client/app/modules/core/services/meta.service.js:98
 #: client/app/modules/notes/services/notes.service.js:46
 #: client/app/modules/settings/services/setting.service.js:37
-#: client/app/modules/strategy/services/strategy.service.js:32
+#: client/app/modules/strategy/services/strategy.service.js:42
 #: client/app/modules/users/services/user.service.js:37
 msgid "Deleting this cannot be undone"
 msgstr ""
@@ -139,7 +135,7 @@ msgstr ""
 msgid "Error deleting setting"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:40
+#: client/app/modules/strategy/services/strategy.service.js:50
 msgid "Error deleting Strategy"
 msgstr ""
 
@@ -163,7 +159,7 @@ msgstr ""
 msgid "Error saving setting"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:24
+#: client/app/modules/strategy/services/strategy.service.js:34
 msgid "Error saving Strategy"
 msgstr ""
 
@@ -212,7 +208,7 @@ msgstr ""
 msgid "Logged in"
 msgstr ""
 
-#: client/app/modules/core/controllers/main.ctrl.js:26
+#: client/app/modules/core/controllers/main.ctrl.js:51
 msgid "Logged out"
 msgstr ""
 
@@ -224,7 +220,7 @@ msgstr ""
 msgid "Manage your settings here!"
 msgstr ""
 
-#: client/app/modules/strategy/views/main.html:1
+#: client/app/modules/strategy/views/main.html:3
 msgid "Manage your strategies here!"
 msgstr ""
 
@@ -329,19 +325,19 @@ msgstr ""
 msgid "strategy"
 msgstr ""
 
-#: client/app/modules/strategy/views/main.html:1
+#: client/app/modules/strategy/views/main.html:2
 msgid "Strategy"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:35
+#: client/app/modules/strategy/services/strategy.service.js:45
 msgid "Strategy deleted"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:19
+#: client/app/modules/strategy/services/strategy.service.js:29
 msgid "Strategy saved"
 msgstr ""
 
-#: client/app/modules/strategy/views/form.html:42
+#: client/app/modules/strategy/views/form.html:55
 msgid "Submit"
 msgstr ""
 
@@ -358,7 +354,7 @@ msgstr ""
 msgid "There are no settings"
 msgstr ""
 
-#: client/app/modules/strategy/views/list.html:17
+#: client/app/modules/strategy/views/list.html:26
 msgid "There are no strategies"
 msgstr ""
 
@@ -374,7 +370,7 @@ msgstr ""
 msgid "This setting could no be saved:"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:25
+#: client/app/modules/strategy/services/strategy.service.js:35
 msgid "This Strategy could no be saved:"
 msgstr ""
 
@@ -415,7 +411,7 @@ msgstr ""
 msgid "You are logged in!"
 msgstr ""
 
-#: client/app/modules/core/controllers/main.ctrl.js:27
+#: client/app/modules/core/controllers/main.ctrl.js:52
 msgid "You are logged out!"
 msgstr ""
 
@@ -476,15 +472,15 @@ msgstr ""
 msgid "Your setting is safe with us!"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:36
+#: client/app/modules/strategy/services/strategy.service.js:46
 msgid "Your Strategy is deleted!"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:41
+#: client/app/modules/strategy/services/strategy.service.js:51
 msgid "Your Strategy is not deleted!"
 msgstr ""
 
-#: client/app/modules/strategy/services/strategy.service.js:20
+#: client/app/modules/strategy/services/strategy.service.js:30
 msgid "Your Strategy is safe with us!"
 msgstr ""
 
