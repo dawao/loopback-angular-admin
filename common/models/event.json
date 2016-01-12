@@ -1,45 +1,21 @@
 {
-  "name": "Note",
-  "plural": "notes",
+  "name": "Event",
+  "plural": "events",
   "base": "PersistedModel",
   "properties": {
     "id": {
       "type": "id"
     },
-    "title": {
+    "badgeClass": {
       "type": "string",
       "required": true
     },
-    "code": {
-      "type": "string",
-      "required": true
-    },
-    "body": {
+    "content": {
       "type": "string",
       "required": true
     },
     "created": {
       "type": "date"
-    },
-    "tags": {
-      "type": [
-        "number"
-      ]
-    },
-    "buys": {
-      "type": [
-        "number"
-      ]
-    },
-    "sell": {
-      "type": [
-        "number"
-      ]
-    },
-    "risk": {
-      "type": [
-        "number"
-      ]
     }
   },
   "validations": [],
@@ -49,10 +25,10 @@
       "model": "user",
       "foreignKey": "ownerId"
     },
-    "strategy": {
+    "note": {
       "type": "belongsTo",
-      "model": "strategy",
-      "foreignKey": "strategyId"
+      "model": "note",
+      "foreignKey": "noteId"
     }
   },
   "acls": [

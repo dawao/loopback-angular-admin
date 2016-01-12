@@ -22,7 +22,7 @@
         <a href="" ui-sref="^.view({id: item.id})">{{item.title}}</a>
       </h4>
 
-      <p class="list-group-item-text" ng-click="ctrl.openTimeline()">{{item.body}}</p>
+      <p class="list-group-item-text" ng-click="ctrl.openTimeline(item.id)">{{item.body}}</p>
     </div>
     <div ng-show="!ctrl.notes.length" class="list-group-item">
       <h4 class="list-group-item-heading" translate>
@@ -35,17 +35,23 @@
 
   <script type="text/ng-template" id="myModalContent.html">
     <div class="modal-header">
-      <h3 class="modal-title">I'm a modal!</h3>
+      <h3 class="modal-title">关于此标的所有想法</h3>
     </div>
     <div class="modal-body">
+      <div class="input-group panel-body">
+        <input type="text" data-ng-model="newEvent.content" class="form-control" placeholder="您此时的想法...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="save()">添加</button>
+      </span>
+      </div>
       <timeline style="max-width: 100%;">
         <timeline-event ng-repeat="event in events">
           <timeline-badge class="{{event.badgeClass}}">
-            <i class="glyphicon {{event.badgeIconClass}}"></i>
+            <i class="glyphicon {{iconClass[event.badgeClass]}}"></i>
           </timeline-badge>
-          <timeline-panel class="{{event.badgeClass}}">
+          <timeline-panel class="{{event.badgeClass}}" ng-dblclick="delete(noteId)">
             <timeline-heading>
-              <h4>{{event.title}}</h4>
+              <h4>{{event.created}}</h4>
             </timeline-heading>
             <p>{{event.content}}</p>
           </timeline-panel>
@@ -53,8 +59,9 @@
       </timeline>
     </div>
     <div class="modal-footer">
+      <span class="label label-default pull-left">双击可以删除</span>
       <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-      <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+      <!--button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button-->
     </div>
   </script>
 </div>

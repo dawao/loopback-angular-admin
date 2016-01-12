@@ -13,29 +13,19 @@
           url: '',
           templateUrl: 'modules/notes/views/list.html',
           controllerAs: 'ctrl',
-          controller: function ($uibModal, notes) {
+          controller: function ($uibModal, notes, EventsService) {
             this.notes = notes;
 
-            this.openTimeline = function (size) {
+            this.openTimeline = function (noteId) {
 
                 var modalInstance = $uibModal.open({
                   templateUrl: 'myModalContent.html',
                   controller: 'ModalInstanceCtrl',
                   resolve: {
                     events: function () {
-                      var events = [{
-                        badgeClass: 'info',
-                        badgeIconClass: 'glyphicon-check',
-                        title: 'First heading',
-                        content: 'Some awesome content.'
-                      }, {
-                        badgeClass: 'warning',
-                        badgeIconClass: 'glyphicon-credit-card',
-                        title: 'Second heading',
-                        content: 'More awesome content.'
-                      }];
-                      return events;
-                    }
+                      return EventsService.getEvents(noteId);
+                    },
+                    noteId:function () {return noteId;}
                   }
                 });
 
@@ -51,11 +41,40 @@
           url: '/add',
           templateUrl: 'modules/notes/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, NotesService, strategies, note) {
+          controller: function ($state, NotesService, strategies, note, $http) {
             this.note = note;
             this.strategies = strategies;
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
-
+            //自动补全股票，添加到列表
+            var suggestServer = new SuggestServer();
+            suggestServer.bind({"input": "symbol", "value": "@3@", "type": "stock", "width": 180,"callback":
+              function (code,arr) {
+                var first = arr, sc = code ;
+                if(arr.length == 0){
+                var first = this._objectData['key_'+code].split(';').shift().split(',');
+                sc =  first[3];
+                }
+                angular.element(document.querySelector('#symbol')).val(first?first[4]:'');
+                note.title = first?first[4]:'';
+                note.code = code;
+              }
+            });
+            /*this.getLocation = function(val) {
+              return $http.get('//gupiao.baidu.com/api/search/stockquery', {
+                params: {
+                  query_content: val,
+                  format:'json',
+                  from:'pc',os_ver:1,cuid:'xxx',vv:100
+                }
+              }).then(function(response){
+                if(response.data.errorNo ===0)
+                  return response.data.data.stock_data.map(function(item){
+                    return item.f_symbolName;
+                  });
+                else
+                  return [response.data.errorMsg];
+              });
+            };*/
             this.change = function() {
                 angular.forEach(strategies, function(stra, k) {
                   if(this.note.strategyId === stra.id){

@@ -42,6 +42,10 @@
     "dataSource": "mongodb",
     "public": true
   },
+  "Event": {
+    "dataSource": "mongodb",
+    "public": true
+  },
   "Setting": {
     "dataSource": "db",
     "public": true

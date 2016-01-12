@@ -13,11 +13,17 @@
             <div class="form-group col-sm-12" >
               <label class="control-label col-sm-1" for="title">标的</label>
               <div class="controls col-sm-4">
-                <input name="title" type="text" data-ng-model="ctrl.note.title" class="form-control" placeholder="代码" required>
+                <input id="symbol" name="title" type="text" data-ng-model="ctrl.note.title" class="form-control" placeholder="代码" required>
+                <!--<input name="title" type="text" data-ng-model="ctrl.note.title" placeholder="code loaded via $http" uib-typeahead="address for address in ctrl.getLocation($viewValue)" typeahead-loading="loadingCodes" typeahead-no-results="noResults"  class="form-control" placeholder="代码" required>
+                <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                <div ng-show="noResults">
+                  <i class="glyphicon glyphicon-remove"></i> No Results Found
+                </div>-->
+                <input name="code" type="hidden" data-ng-model="ctrl.note.code">
               </div>
               <label class="control-label col-sm-1" for="strategy">{{ 'Strategy' | translate }}</label>
               <div class="controls col-sm-4">
-                <select name="strategy" class="form-control" ng-model="ctrl.note.strategyId" ng-options="strategy.id as strategy.name for strategy in ctrl.strategies" ng-change="ctrl.change()"></select>
+                <select name="strategy" class="form-control" ng-model="ctrl.note.strategyId" ng-options="strategy.id as strategy.name for strategy in ctrl.strategies" ng-change="ctrl.change()" required></select>
               </div>
             </div>
             <div class="form-group col-sm-12">
@@ -33,7 +39,7 @@
             <div class="form-group col-sm-12">
               <label class="control-label col-sm-1" for="content">备注</label>
               <div class="controls col-sm-10">
-                <textarea name="content" data-ng-model="ctrl.note.body" class="form-control" cols="30" rows="10" placeholder="您的相法"></textarea>
+                <textarea name="content" data-ng-model="ctrl.note.body" class="form-control" cols="30" rows="10" placeholder="您的想法" required></textarea>
               </div>
             </div>
           </form>
