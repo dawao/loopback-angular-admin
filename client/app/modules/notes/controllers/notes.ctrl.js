@@ -4,12 +4,14 @@ var app = angular.module('com.module.notes');
 app.controller('ModalInstanceCtrl', function($scope, $uibModalInstance, events, noteId, EventsService) {
 
   $scope.events = events;
-  $scope.noteId = noteId;
   $scope.newEvent = {noteId:noteId};
   $scope.iconClass = {info:'glyphicon-check', warning:'glyphicon-credit-card', success:'glyphicon-flag'};
 
   $scope.save = function () {
-    EventsService.upsertEvent($scope.newEvent);
+    var pm = EventsService.upsertEvent($scope.newEvent);
+    pm.then(function (evt) {
+      $scope.events.unshift(evt);
+    });
   };
 
   $scope.delete = function (id) {

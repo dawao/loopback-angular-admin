@@ -46,6 +46,7 @@
             this.strategies = strategies;
             this.setting = {tags:[],buys:[],sell:[],risk:[]};
             //自动补全股票，添加到列表
+            try{
             var suggestServer = new SuggestServer();
             suggestServer.bind({"input": "symbol", "value": "@3@", "type": "stock", "width": 180,"callback":
               function (code,arr) {
@@ -58,7 +59,7 @@
                 note.title = first?first[4]:'';
                 note.code = code;
               }
-            });
+            });}catch(e){}
             /*this.getLocation = function(val) {
               return $http.get('//gupiao.baidu.com/api/search/stockquery', {
                 params: {

@@ -49,7 +49,7 @@
           <timeline-badge class="{{event.badgeClass}}">
             <i class="glyphicon {{iconClass[event.badgeClass]}}"></i>
           </timeline-badge>
-          <timeline-panel class="{{event.badgeClass}}" ng-dblclick="delete(noteId)">
+          <timeline-panel class="{{event.badgeClass}}" ng-dblclick="delete(event.id)">
             <timeline-heading>
               <h4>{{event.created}}</h4>
             </timeline-heading>

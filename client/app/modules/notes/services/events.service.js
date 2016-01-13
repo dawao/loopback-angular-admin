@@ -10,7 +10,7 @@
             order: 'created DESC',
             where: {
               noteId: noteId
-            }
+            }//,include: ['user']
           }
         }).$promise;
       };
@@ -23,11 +23,12 @@
 
       this.upsertEvent = function (note) {
         return Event[note.id?'upsert':'create'](note).$promise
-          .then(function () {
+          .then(function (evt) {
             CoreService.toastSuccess(
               gettextCatalog.getString('Note saved'),
               gettextCatalog.getString('Your note is safe with us!')
             );
+            return evt;
           })
           .catch(function (err) {
             CoreService.toastSuccess(
