@@ -101,6 +101,34 @@
             });
           }
         })
+        .state('app.users.password', {
+          url: '/password/:id',
+          templateUrl: 'modules/users/views/password.html',
+          controllerAs: 'ctrl',
+          controller: function ($state, User, auser) {
+            this.user = auser;
+            this.password = '';
+            this.confirm_password = '';
+            this.save = function () {
+              User.resetPassword({ 
+                email: this.user.email, 
+                password: this.password, 
+                password_confirmation: this.confirm_password, 
+                id: this.user.id 
+              }, function (response, headers) {
+                alert('Password successfully changed, please login with the new password');
+                $state.go('^.list');
+              }, function (response) {
+                  alert(JSON.stringify(response.data));
+              });
+            };
+          },
+          resolve: {
+            auser: function ($stateParams, UserService) {
+              return UserService.findById($stateParams.id);
+            }
+          }
+        })
         .state('app.users.profile', {
           url: '/profile',
           templateUrl: 'modules/users/views/profile.html',

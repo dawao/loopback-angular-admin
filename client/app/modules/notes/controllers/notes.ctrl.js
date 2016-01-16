@@ -28,6 +28,23 @@ app.controller('ModalInstanceCtrl', function($scope, $uibModalInstance, events, 
     );
   };
 
+  $scope.change = function (id) {
+
+    angular.forEach($scope.events, function(value, key) {
+      if(value.id === id){
+        if (value.badgeClass === 'info') {
+          value.badgeClass = 'warning';
+        }else if (value.badgeClass === 'warning') {
+          value.badgeClass = 'success';
+        }else if (value.badgeClass === 'success') {
+          value.badgeClass = 'info';
+        };
+        value.$save();
+      }
+    });
+
+  };
+
   $scope.ok = function () {
     $uibModalInstance.close();
   };

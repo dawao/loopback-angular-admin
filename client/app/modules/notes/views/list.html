@@ -39,14 +39,14 @@
     </div>
     <div class="modal-body">
       <div class="input-group panel-body">
-        <input type="text" data-ng-model="newEvent.content" class="form-control" placeholder="您此时的想法...">
+        <input type="text" data-ng-model="newEvent.content" ng-keydown="$event.which === 13 && save()" class="form-control" placeholder="您此时的想法...">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" ng-click="save()">添加</button>
       </span>
       </div>
       <timeline style="max-width: 100%;">
         <timeline-event ng-repeat="event in events">
-          <timeline-badge class="{{event.badgeClass}}">
+          <timeline-badge class="{{event.badgeClass}}" ng-dblclick="change(event.id)">
             <i class="glyphicon {{iconClass[event.badgeClass]}}"></i>
           </timeline-badge>
           <timeline-panel class="{{event.badgeClass}}" ng-dblclick="delete(event.id)">
@@ -59,7 +59,7 @@
       </timeline>
     </div>
     <div class="modal-footer">
-      <span class="label label-default pull-left">双击可以删除</span>
+      <span class="label label-default pull-left">双击一条记录可以删除它，双击图标可以切换图标</span>
       <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
       <!--button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button-->
     </div>
