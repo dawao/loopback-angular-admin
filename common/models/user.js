@@ -11,12 +11,12 @@ module.exports = function (user) {
     }
     next();
   });
-  
+
   //reset the user's pasword
   user.beforeRemote('resetPassword', function (context, /*user,*/ next) {
       if (context.req.body.password) {
-          if (!context.req.headers.access_token) return context.res.sendStatus(401);
-        
+          //if (!context.req.headers.access_token) return context.res.sendStatus(401);
+
           //verify passwords match
           if (!context.req.body.password ||
               !context.req.body.password_confirmation ||
