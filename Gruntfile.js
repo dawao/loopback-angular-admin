@@ -285,9 +285,9 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
-          '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/fonts/*'
+          '<%= yeoman.dist %>/styles/{,*/}*.css'
+          //,'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          //,'<%= yeoman.dist %>/fonts/*'
         ]
       }
     },
@@ -470,7 +470,7 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: '<%= yeoman.app %>/bower_components/bootstrap/dist',
+            cwd: '<%= yeoman.app %>/bower_components/bootstrap-css-only',
             src: 'fonts/*',
             dest: '<%= yeoman.dist %>'
           },
