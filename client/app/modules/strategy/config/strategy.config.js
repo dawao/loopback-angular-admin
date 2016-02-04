@@ -3,7 +3,7 @@ var app = angular.module('com.module.strategy');
 
 app.run(function($rootScope, Strategy, gettextCatalog) {
   $rootScope.addMenu(gettextCatalog.getString('strategy'), 'app.strategy.list',
-    'fa-file-o');
+    'fa-diamond');
 
   Strategy.find(function(data) {
     $rootScope.addDashboardBox(gettextCatalog.getString('strategy'),
