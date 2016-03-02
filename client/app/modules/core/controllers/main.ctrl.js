@@ -41,6 +41,15 @@
 
         }, function () {
           // Error with request//$rootScope.r_deferred.reject();
+          var menuoptions = [];
+          //github user 没有roles,展示无rolse的菜单 
+          angular.forEach($rootScope.menu, function (menu) {
+            var sd = $state.get(menu.sref).data;
+            var nr = sd && sd.roles ? sd.roles : [];
+            var hasRole = nr.length?false:true;
+            hasRole && this.push(menu);
+          },menuoptions);
+          $scope.menuoptions = menuoptions;
         });
 
       $scope.logout = function () {
