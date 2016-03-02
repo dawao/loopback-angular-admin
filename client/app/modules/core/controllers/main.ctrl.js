@@ -23,6 +23,16 @@
       $scope.menuoptions = [];
 
       User.roles({ id : LoopBackAuth.currentUserId//,filter: {where: {name: 'admin'}}
+        },null,function(){
+          var menuoptions = [];
+          //github user 没有roles,展示无rolse的菜单 
+          angular.forEach($rootScope.menu, function (menu) {
+            var sd = $state.get(menu.sref).data;
+            var nr = sd && sd.roles ? sd.roles : [];
+            var hasRole = nr.length?false:true;
+            hasRole && this.push(menu);
+          },menuoptions);
+          $scope.menuoptions = menuoptions;
         }).$promise.then(function (data) {
           var menuoptions = [];
           //只展示有权限的菜单
