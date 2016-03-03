@@ -9,24 +9,22 @@
    **/
   angular
     .module('com.module.core')
-    .controller('HomeCtrl', function ( $scope, $rootScope,$state,User,AppAuth, $location) {
+    .controller('HomeCtrl', function ( $scope, $rootScope,$state,User,LoopBackAuth, $location) {
       $scope.count = {};
       $scope.boxes = $rootScope.dashboardBox;
-        if (!AppAuth.currentUser) {
-          $location.path('/login');
-        }else{
-          User.roles({ id : AppAuth.currentUser.id,filter: {where: {name: 'admin'}}
-          }).$promise.then(function (data) {
-            if(data.length > 0){
 
-            }else{
-              $state.go('app.notes.list');
-            }
-          }, function () {
-            // Error with request
-              $state.go('app.notes.list');
-          });
-         }
+      User.roles({ id : LoopBackAuth.currentUserId,filter: {where: {name: 'admin'}}
+      }).$promise.then(function (data) {
+        if(data.length > 0){
+
+        }else{
+          $state.go('app.notes.list');
+        }
+      }, function () {
+        // Error with request
+          $state.go('app.notes.list');
+      });
+
     });
 
 })();
