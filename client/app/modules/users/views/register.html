@@ -6,19 +6,42 @@
 
     <div class="login-box-msg" style="text-align: left; padding-left: 25px;" translate>Register</div>
 
-    <form name="joinForm" class="form-signin" role="form" ng-submit="register()">
+    <form name="joinForm" role="form" ng-submit="register()" novalidate>
       <div class="body bg-gray">
         <div class="callout callout-danger" ng-if="registerError">
           <p>{{registerError.message | translate }}</p>
         </div>
-        <auto:fields fields="schema" data="registration" options="options"></auto:fields>
+
+        <div class="form-group has-feedback" ng-class="{'has-error':joinForm.firstName.$invalid && joinForm.firstName.$dirty, 'has-success':joinForm.firstName.$valid}">
+          <input name="firstName" type="text" class="form-control" placeholder="First Name" ng-model="registration.firstName" ng-minlength="4" required="required">
+          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-error':joinForm.lastName.$invalid && joinForm.lastName.$dirty, 'has-success':joinForm.lastName.$valid}">
+          <input name="lastName" type="text" class="form-control" placeholder="Last Name" ng-model="registration.lastName" ng-minlength="4" required="required">
+          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-error':joinForm.email.$invalid && joinForm.email.$dirty, 'has-success':joinForm.email.$valid}">
+          <input name="email" type="email" class="form-control" placeholder="Email" ng-model="registration.email" ng-minlength="4" required="required">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-error':joinForm.password.$invalid && joinForm.password.$dirty, 'has-success':joinForm.password.$valid}">
+          <input name="password" type="password" class="form-control" placeholder="Password" ng-model="registration.password" ng-minlength="6" required="required">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-error':joinForm.confirmPassword.$invalid && joinForm.confirmPassword.$dirty, 'has-success':joinForm.confirmPassword.$valid}">
+          <input name="confirmPassword" type="password" class="form-control" placeholder="Retype password" ng-model="registration.confirmPassword" confirm-password="registration.password" ng-minlength="6" required="required">
+          <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        </div>
+
       </div>
-      <div class="footer">
-        <button type="submit" class="btn bg-olive btn-block" ng-class="{'btn-primary':joinForm.$valid}" translate>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-block btn-flat" ng-class="{'btn-primary':joinForm.$valid}" translate>
           Register
         </button>
-        <a href='#/login' class="btn bg-yellow btn-block" translate>Or sign in </a>
       </div>
     </form>
+    <div class="social-auth-links text-center">
+    </div>
+    <a href="#/login" class="text-center" translate>I already have a membership</a>
   </div>
 </div>

@@ -34,7 +34,7 @@
       // 'ui.grid',
       'ui.router',
       'angular-toasty',
-      'autofields',
+      //'autofields',
       'gettext',
       // 'angular-underscore/filters', 'schemaForm',
       'ui.select',
