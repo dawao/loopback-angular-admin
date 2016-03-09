@@ -1,5 +1,10 @@
 <header class="main-header">
-  <a class="logo" href="/">{{ getSetting('appName') }}</a>
+  <a class="logo" href="/">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>NT</b>F</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">{{ getSetting('appName') }}</span>
+    </a>
   <navbar></navbar>
 </header>
 
@@ -22,8 +27,8 @@
       </div>
     </div>
     <ul class="sidebar-menu">
-      <li ng-repeat="item in menuoptions" ui-sref-active="active">
-        <a class="" href="" ui-sref="{{item.sref}}"><i class="fa fa-fw {{item.icon}}"></i> {{item.name | translate}}</a>
+      <li ng-repeat="item in menuoptions" ui-sref-active="active" class="treeview">
+        <a class="" href="" ui-sref="{{item.sref}}"><i class="fa {{item.icon}}"></i> <span>{{item.name | translate}}</span></a>
       </li>
     </ul>
   </section>

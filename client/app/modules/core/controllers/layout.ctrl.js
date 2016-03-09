@@ -66,7 +66,7 @@
           if ($(document.body).hasClass('sidebar-collapse')) {
             $(document.body).removeClass('sidebar-collapse');
           } else {
-            $(document.body).addClass('sidebar-collapse');
+            $(document.body).addClass('sidebar-collapse').addClass('sidebar-mini');
           }
         }
         //Handle sidebar push menu for small screens
