@@ -12,6 +12,7 @@
     .directive('navbar', function () {
       return {
         templateUrl: 'modules/core/views/elements/navbar.html',
+        replace:true,
         restrict: 'E'
       };
     });

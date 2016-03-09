@@ -11,6 +11,7 @@
     .directive('register', function () {
       return {
         templateUrl: 'modules/users/views/register.html',
+        replace:true,
         restrict: 'E'
       };
     });

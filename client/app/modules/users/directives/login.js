@@ -11,6 +11,7 @@
     .directive('login', function () {
       return {
         templateUrl: 'modules/users/views/login.html',
+        replace:true,
         restrict: 'E'
       };
     });

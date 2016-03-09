@@ -61,15 +61,21 @@
 
       $scope.toggleSidebar = function () {
         var $ = angular.element;
-        if (window.innerWidth <= 992) {
-          $(document.querySelector('.row-offcanvas')).toggleClass('active');
-          $(document.querySelector('.left-side')).removeClass('collapse-left');
-          $(document.querySelector('.right-side')).removeClass('strech');
-          $(document.querySelector('.row-offcanvas')).toggleClass('relative');
-        } else {
-          // Else, enable content streching
-          $(document.querySelector('.left-side')).toggleClass('collapse-left');
-          $(document.querySelector('.right-side')).toggleClass('strech');
+        //Enable sidebar push menu
+        if (window.innerWidth > (768 - 1)) {
+          if ($(document.body).hasClass('sidebar-collapse')) {
+            $(document.body).removeClass('sidebar-collapse');
+          } else {
+            $(document.body).addClass('sidebar-collapse');
+          }
+        }
+        //Handle sidebar push menu for small screens
+        else {
+          if ($(document.body).hasClass('sidebar-open')) {
+            $(document.body).removeClass('sidebar-open').removeClass('sidebar-collapse');
+          } else {
+            $(document.body).addClass('sidebar-open');
+          }
         }
       };
 
