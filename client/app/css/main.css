@@ -49,6 +49,57 @@
 .nav-tabs > li > a, .nav-tabs > li > a:hover {
   cursor: pointer;
 }
+.nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus {
+    color: #444;
+    background: #222d32;
+}
 .timeline:before {
     left: 50%;
+}
+
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li.active>a, .control-sidebar-dark .control-sidebar-tabs.nav-tabs>li.active>a:hover, .control-sidebar-dark .control-sidebar-tabs .nav-tabs>li.active>a:focus, .control-sidebar-dark .control-sidebar-tabs .nav-tabs>li.active>a:active {
+    background: #222d32;
+    color: #fff;
+}
+
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a, .control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a:hover, .control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a:focus {
+    border-left-color: #141a1d;
+    border-bottom-color: #141a1d;
+}
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a {
+    background: #181f23;
+    color: #b8c7ce;
+}
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a:hover {
+    color: #fff;
+}
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a:hover, .control-sidebar-dark .control-sidebar-tabs.nav-tabs>li>a:focus, .control-sidebar-dark .control-sidebar-tabs.nav-tabs>li>a:active {
+    background: #222d32;
+}
+.control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a, .control-sidebar-dark .control-sidebar-tabs .nav-tabs>li>a:hover, .control-sidebar-dark .nav-tabs.control-sidebar-tabs>li>a:focus {
+    border-left-color: #141a1d;
+    border-bottom-color: #141a1d;
+}
+.control-sidebar-tabs .nav-tabs>li:first-of-type>a, .control-sidebar-tabs .nav-tabs>li:first-of-type>a:hover, .control-sidebar-tabs .nav-tabs>li:first-of-type>a:focus {
+    border-left-width: 0;
+}
+.control-sidebar-tabs .nav-tabs>li.active>a, .control-sidebar-tabs .nav-tabs>li.active>a:hover, .control-sidebar-tabs .nav-tabs>li.active>a:focus, .control-sidebar-tabs .nav-tabs>li.active>a:active {
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.control-sidebar-tabs .nav-tabs>li>a, .control-sidebar-tabs .nav-tabs>li>a:hover {
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.control-sidebar-tabs .nav-tabs>li>a {
+    border-radius: 0;
+}
+
+.control-sidebar .control-sidebar-tabs>.tab-content {
+    padding: 10px 15px;
 }

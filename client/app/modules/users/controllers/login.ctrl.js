@@ -14,6 +14,9 @@
     .controller('LoginCtrl', function ($scope, $routeParams, $location, CoreService, User, AppAuth, AuthProvider, gettextCatalog) {
 
       var TWO_WEEKS = 1000 * 60 * 60 * 24 * 7 * 2;
+      //add class when login or register , remove it when success
+      angular.element(document.documentElement).addClass('full-height');
+      angular.element(document.body).addClass('full-height');
 
       $scope.credentials = {
         ttl: TWO_WEEKS,
@@ -104,7 +107,8 @@
               next = '/';
             }
             $location.path(next);
-
+            angular.element(document.body).removeClass('full-height');
+            angular.element(document.documentElement).removeClass('full-height');
           },
           function (res) {
             $scope.loginError = res.data.error;

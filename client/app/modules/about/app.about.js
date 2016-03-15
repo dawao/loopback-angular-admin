@@ -12,7 +12,7 @@
    *
    */
   var app = angular.module('com.module.about', []);
-  var Hello = React.createClass( {
+  /**var Hello = React.createClass( {
     propTypes: {
       fname: React.PropTypes.string.isRequired,
       lname: React.PropTypes.string.isRequired
@@ -29,6 +29,6 @@
 
   app.directive( 'hello', function( reactDirective ) {
     return reactDirective( Hello );
-  } );
+  } );*/
 
 })();

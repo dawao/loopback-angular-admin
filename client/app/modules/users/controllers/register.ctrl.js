@@ -13,6 +13,9 @@
     .module('com.module.users')
     .controller('RegisterCtrl', function ($scope, $routeParams, $location, $filter, CoreService, User, AppAuth, gettextCatalog) {
 
+      angular.element(document.documentElement).addClass('full-height');
+      angular.element(document.body).addClass('full-height');
+
       $scope.registration = {
         firstName: '',
         lastName: '',
@@ -122,6 +125,8 @@
                   'Registered'), gettextCatalog.getString(
                   'You are registered!'));
                 $location.path('/');
+                angular.element(document.body).removeClass('full-height');
+                angular.element(document.documentElement).removeClass('full-height');
               },
               function (res) {
                 CoreService.toastWarning(gettextCatalog.getString(

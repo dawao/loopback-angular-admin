@@ -79,6 +79,11 @@
         }
       };
 
+      $scope.controlSidebar = function () {
+        var $body = angular.element(document.body);
+        $body.toggleClass('control-sidebar-open');
+      };
+
       $scope.settings = $rootScope.settings;
 
       $rootScope.loadSettings();

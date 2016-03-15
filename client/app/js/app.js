@@ -39,7 +39,7 @@
       // 'angular-underscore/filters', 'schemaForm',
       'ui.select',
       'ngTagsInput',
-      'react',
+      //'react',//about目录注释相关内容，bower.json 去掉,"ngReact":"~0.2.0"
       'com.module.core',
       'com.module.about',
       // 'com.module.browser',
